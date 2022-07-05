@@ -1,5 +1,5 @@
 const GetQuestion = (props) => {
-  const { question, value, answer, category } = props;
+  const { question, value, answer, category, isVisible } = props;
   return (
     <div>
       <h2>Let's Play</h2>
@@ -7,23 +7,24 @@ const GetQuestion = (props) => {
         Get Question
       </button>
       <div className="category">
-        <h3>Category:</h3> <p>{category}</p>
+        <h3 className="title">Category:</h3>{" "}
+        <p className="display">{category}</p>
       </div>
 
       <div className="points">
-        <h4>Points:</h4> <p>{value}</p>
+        <h4 className="title">Points:</h4> <p className="display">{value}</p>
       </div>
 
       <div className="question">
-        <h4>Question:</h4>
-        <p>{question}</p>
+        <h4 className="title">Question:</h4>
+        <p className="display">{question}</p>
       </div>
 
       <button onClick={props.handleReveal} className="reveal">
         Click to Reveal Answer
       </button>
-      <div className="answer">
-        <h3>Answer:</h3> <h4>{answer}</h4>
+      <div className="answer" style={isVisible ? null : "display: none"}>
+        <h3 className="title">Answer:</h3> <h4 className="display">{answer}</h4>
       </div>
     </div>
   );

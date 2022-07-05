@@ -78,6 +78,7 @@ class App extends Component {
           value={this.state.value}
           answer={this.state.answer}
           question={this.state.question}
+          isVisible={this.state.isVisible}
         />
       </div>
     );
