@@ -23,9 +23,12 @@ const GetQuestion = (props) => {
       <button onClick={props.handleReveal} className="reveal">
         Click to Reveal Answer
       </button>
-      <div className="answer" style={isVisible ? null : "display: none"}>
-        <h3 className="title">Answer:</h3> <h4 className="display">{answer}</h4>
-      </div>
+      {isVisible ? (
+        <div className="answer">
+          <h3 className="title">Answer:</h3>{" "}
+          <h4 className="display">{answer}</h4>
+        </div>
+      ) : null}
     </div>
   );
 };
