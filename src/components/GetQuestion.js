@@ -6,6 +6,7 @@ const GetQuestion = (props) => {
       <button onClick={props.handleGetQuestion} className="get-question">
         Get Question
       </button>
+      <br />
       <div className="category">
         <h3 className="title">Category:</h3>{" "}
         <p className="display">{category}</p>

@@ -41,6 +41,7 @@ class App extends Component {
     this.setState(
       {
         questionURL: this.state.baseURL,
+        isVisible: false,
       },
       () => {
         fetch(this.state.questionURL)
