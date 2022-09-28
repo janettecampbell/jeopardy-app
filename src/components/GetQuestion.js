@@ -1,9 +1,17 @@
 const GetQuestion = (props) => {
-  const { question, value, answer, category, isVisible } = props;
+  const {
+    question,
+    value,
+    answer,
+    category,
+    isVisible,
+    handleGetQuestion,
+    handleReveal,
+  } = props;
   return (
     <div>
       <h2>Let's Play</h2>
-      <button onClick={props.handleGetQuestion} className="get-question">
+      <button onClick={handleGetQuestion} className="get-question">
         Get Question
       </button>
       <br />
@@ -21,7 +29,7 @@ const GetQuestion = (props) => {
         <p className="display">{question}</p>
       </div>
 
-      <button onClick={props.handleReveal} className="reveal">
+      <button onClick={handleReveal} className="reveal">
         Click to Reveal Answer
       </button>
       {isVisible ? (

@@ -1,14 +1,15 @@
 const Score = (props) => {
+  const { score, handleDecrease, handleIncrease, handleReset } = props;
   return (
     <div>
-      <h2>Score: {props.score}</h2>
-      <button onClick={props.handleDecrease} className="decrease">
+      <h2>Score: {score}</h2>
+      <button onClick={handleDecrease} className="decrease">
         Decrease
       </button>
-      <button onClick={props.handleIncrease} className="increase">
+      <button onClick={handleIncrease} className="increase">
         Increase
       </button>
-      <button onClick={props.handleReset} className="reset">
+      <button onClick={handleReset} className="reset">
         Reset
       </button>
     </div>
